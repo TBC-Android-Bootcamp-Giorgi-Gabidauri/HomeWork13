@@ -24,5 +24,4 @@ data class InternalTransformations(
     val deliveryDateMilliseconds: Long,
     val startDateOptionMilliseconds: Any?,
     val endDateOptionMilliseconds: Any?,
-
-    )
+)

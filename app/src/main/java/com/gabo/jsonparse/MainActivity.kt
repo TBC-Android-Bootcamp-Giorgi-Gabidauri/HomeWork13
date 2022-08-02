@@ -23,11 +23,13 @@ class MainActivity : AppCompatActivity() {
                 if (viewState.value?.isSuccessful == true) {
                     binding.tv.text = viewState.value!!.itemData.toString()
                 } else {
-                    Toast.makeText(
-                        this@MainActivity,
-                        viewState.value?.error ?: "",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    viewState.value?.error?.let {
+                        Toast.makeText(
+                            this@MainActivity,
+                            viewState.value?.error ?: "",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
         }
